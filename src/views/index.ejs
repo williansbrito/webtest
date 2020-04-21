@@ -32,16 +32,50 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container p-5">
+
+
+
+
+
+
+<!-- Page Content -->
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-lg-12 text-center">
+           
+				<h1 class="mt-5">Welcome to STEP - Dance & Performance School</h1>
+				<h3 class="lead"> </h3>
+			</div>
+			<div id="results" class="col-lg-8 text-center order-3"></div>
+		</div>
+	</div>
+
+
+	<div class="container">
 		<div class="row">
-			<div class="col-md-4 offset-md-4">
+        <div class="col-lg-4 text-center order-1">
+			
 				<form action="/create" method="POST" class="card card-body">
 					<div class="form-group">
-						<input type="text" name="task" placeholder="Insert a Course Name" class="form-control" autofocus>
+						<select type="text" name="task" placeholder="Insert a Course Name" class="form-control" autofocus>
+                    
+							<option value="Ballet Dance">Ballet Dance</option>
+							<option value="Tap Dance">Tap Dance</option>
+							<option value="Jazz Dance">Jazz Dance</option>
+							<option value="Morden Dance">Morden Dance</option>
+						</select>
+                    
                     </div>
                     <div class="form-group">
-						<input type="text" name="description" placeholder="Insert course level" class="form-control">
-                    </div>
+						<select type="text" name="description" placeholder="Insert course level" class="form-control">
+                       
+							<option value="Beginner">Beginner</option>
+							<option value="Intermadiate">Intermadiate</option>
+							<option value="Advanced">Avanced</option>
+							
+						</select>
+
+                        </div>
                     <div class="form-group">
 						<input type="text" name="price" placeholder="Course Price" class="form-control">
                     </div>
@@ -49,18 +83,24 @@
                         Save
                     </button>
 				</form>
-
+               
+        </div>
+ 
+ <div class="col-lg-8 text-center order-2">
                 <% tasks.forEach(function (task) { %>
-                    <div class="card card-body mt-3">
+                    <div class="card card-body mt-1">
                         <h5><%= task.task %></h5>
                         <p><%= task.description %></p>
                         <p><%= task.price %></p>
                     </div>
                 <% }) %>
+</div>
+
+               
 			</div>
 		</div>
 	</div>
-
+	
 </body>
 
 </html>
