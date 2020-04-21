@@ -1,12 +1,14 @@
 const { Schema, model } = require('mongoose');
 
 const TaskSchema = new Schema({
-    task: {
+    course: {
         type: String,
         required: true
     },
-    price: String,
-    description: String,
+    level: String,
+    name: String,
+    email:String,
+    review:String
     
 });
 

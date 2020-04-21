@@ -22,9 +22,11 @@ app.post('/create', async (req, res) => {
     const newTask = new Task({
         
         
-        task: req.body.task,
-        price: req.body.price,
-        description: req.body.description
+        course: req.body.course,
+        level: req.body.level,
+        name: req.body.name,
+        email: req.body.email,
+        review: req.body.review
     });
     await newTask.save();
     res.redirect('/');
