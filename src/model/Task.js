@@ -14,7 +14,4 @@ const TaskSchema = new Schema({
 
 
 
-
-
-
 module.exports = model('Task', TaskSchema);
